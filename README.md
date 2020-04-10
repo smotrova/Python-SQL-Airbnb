@@ -1,2 +1,4 @@
 # Python-SQL-Airbnb
-Practical exercises for analytics skills
+
+Clean, transform, analyse the data from Airbnb using SQL and Python in order to answer business questions:
+
