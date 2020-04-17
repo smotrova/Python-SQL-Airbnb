@@ -221,11 +221,11 @@ df = airbnb[f]
 df.loc[df.log_price==df.log_price.min(), 'neighbourhood']
 
 # =============================================================================
-# Find the average number of searches made by each user and present 
+# Find the number of searches made by each user and present 
 # the result with their corresponding user id.
 # Table: airbnb_searches
 # =============================================================================
-searches.groupby('id_user')['n_searches'].mean().reset_index()
+searches.groupby('id_user')['id_user'].count().reset_index()
 
 # =============================================================================
 # Display the number of times a user performed a search which led to 

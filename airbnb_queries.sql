@@ -211,9 +211,9 @@ where (bed_type = 'Real Bed') and (description like '% beach %') and (property_t
     select min(log_price) from airbnb_search_details
     where (log_price > 0) and (bed_type = 'Real Bed') and (description like '% beach %') and (property_type='Villa'));
     
--- Find the average number of searches made by each user and present the result with their corresponding user id.
+-- Find the number of searches made by each user and present the result with their corresponding user id.
 -- Table: airbnb_searches
-select id_user, avg(n_searches) from  airbnb_searches
+select id_user, count(id_user) from  airbnb_searches
 group by id_user;
 
 -- Display the number of times a user performed a search which led to a successful booking and the number of times a user performed a search but did not lead to a booking. The output should have a column named action with values 'does not book' and 'books' as well as a 2nd column named average_searches with the average number of searches per action. Consider that the booking did not happen if the booking date is null.
